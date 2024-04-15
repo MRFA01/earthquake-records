@@ -1,2 +1,15 @@
-<h1>Features#show</h1>
-<p>Find me in app/views/features/show.html.erb</p>
+<p style="color: green"><%= notice %></p>
+
+<%= render @feature %>
+
+<p><strong>Comments:</strong></p>
+<ul class="list-group">
+  <% @feature.comments.each do |comment| %>
+    <li class="list-group-item"><%= comment.body %></li>
+  <% end %>
+</ul>
+<br>
+<div>
+  <%= link_to "Add new comment", new_feature_comment_path(@feature) %>
+  <%= link_to "Back to features", features_path %>
+</div>
