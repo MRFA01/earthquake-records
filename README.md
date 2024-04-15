@@ -23,3 +23,4 @@ git clone https://github.com/MRFA01/earthquake-records
 cd earthquake-records
 bundle install
 rails generate simple_form:install --bootstrap"
+rails s
